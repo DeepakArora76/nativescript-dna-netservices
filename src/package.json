@@ -1,0 +1,80 @@
+{
+  "name": "nativescript-dna-netservices",
+  "version": "2.0.1",
+  "description": "NativeScript plugin for Bonjour/ZeroConf and network monitoring. RxJS based APIs for Android and iOS.",
+  "main": "index",
+  "typings": "index.d.ts",
+  "nativescript": {
+    "platforms": {
+      "android": "8.0.0",
+      "ios": "8.0.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeepakArora76/nativescript-dna-netservices.git"
+  },
+  "scripts": {
+    "nsc": "npm i && nsc",
+    "build": "npm run nsc && npm run build.native",
+    "build.native": "node scripts/build-native.js",
+    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
+    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
+    "prepack": "npm run build.native",
+    "demo.ios": "npm i && cd ../demo && nsc run ios",
+    "demo.ios.debug": "npm run nsc && cd ../demo && nsc debug ios",
+    "demo.android": "npm i && cd ../demo && nsc run android",
+    "demo.android.debug": "npm i && cd ../demo && nsc debug android",
+    "demo.reset": "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json",
+    "plugin.prepare": "npm run build && cd ../demo && nsc plugin remove nativescript-dna-netservices && nsc plugin add ../src",
+    "publish-packages": "nx g @nativescript/plugin-tools:publish",
+    "clean": "npm run demo.reset && npx rimraf -- node_modules package-lock.json && npm i",
+    "setup": "npx rimraf node_modules package-lock.json dist tmp && npm i && ts-patch install"
+  },
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "Bonjour",
+    "ZeroConf",
+    "Network Monitor",
+    "IP address",
+    "Device IP address",
+    "Cellular IP address",
+    "WiFi IP address",
+    "Publish",
+    "Discover",
+    "Browse",
+    "Android",
+    "iOS"
+  ],
+  "author": {
+    "name": "Deepak Arora",
+    "email": "deepak.arora76@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/DeepakArora76/nativescript-dna-netservices/issues"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/DeepakArora76/nativescript-dna-netservices",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "@nativescript/android": "~8.0.0",
+    "@nativescript/core": "~8.0.1",
+    "@nativescript/ios": "~8.0.0",
+    "@nativescript/types": "~8.0.0",
+    "@nativescript/webpack": "~3.0.0",
+    "ng-packagr": "^11.2.4",
+    "prompt": "^1.1.0",
+    "rimraf": "^3.0.2",
+    "semver": "^7.3.5",
+    "ts-node": "^9.1.1",
+    "ts-patch": "^1.3.2",
+    "tslint": "^6.1.3",
+    "typescript": "~4.0.0"
+  },
+  "dependencies": {
+    "nativescript-permissions": "^1.3.11",
+    "rxjs": "^6.6.7"
+  },
+  "bootstrapper": "nativescript-plugin-seed"
+}

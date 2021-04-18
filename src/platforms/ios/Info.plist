@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <!--Describe the permissions, features or other configurations required by your plugin for iOS.-->
+  <!--Below permissions are needed on the demo app side.-->
+  <!-- <dict>
+    <key>NSLocalNetworkUsageDescription</key>
+    <string>Require local network access.</string>
+    <key>NSBonjourServices</key>
+    <array>
+      <string>_http._tcp</string>
+      <string>_ipp._tcp</string>
+    </array>
+  </dict> -->
+</plist>
