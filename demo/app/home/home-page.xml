@@ -12,7 +12,6 @@
     <Button text="Resolve Service" tap="{{ onResolveServiceTap }}" class="btn btn-primary btn-active" />
     <Button text="Browse Service" tap="{{ onBrowseServiceTap }}" class="btn btn-primary btn-active" />
     <Button text="Search All Browsable Domains" tap="{{ onSearchBrowsableDomainsTap }}" class="btn btn-primary btn-active" />
-
     <Button text="Subscribe Network Status" tap="{{ onSubscribeToNetworkStatusTap }}" class="btn btn-primary btn-active" />
     <Button text="WiFi IP Address" tap="{{ onWifiIpAddressTap }}" class="btn btn-primary btn-active" />
   </StackLayout>
